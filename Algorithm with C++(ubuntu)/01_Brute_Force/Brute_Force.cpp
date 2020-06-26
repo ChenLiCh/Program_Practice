@@ -12,12 +12,12 @@ int main() {
     str1 = new char[SIZE];
     str2 = new char[SIZE];
 
-    cout << "請輸入第1個字串: ";
+    cout << "Please input the 1st string: ";
     cin >> str1;
-    cout << "請輸入第2個字串: ";
+    cout << "Please input the 2nd string: ";
     cin >> str2;
     
-    // 計算字串長度
+    // Count string length
     int str1_length = 0, str2_length = 0;
     for (int i = 0; i < SIZE && str1[i] != '\0'; i++) {
         str1_length++;
@@ -44,14 +44,14 @@ void Compare(const char *compare_str1, const char *compare_str2, int length1, in
             if (compare_str1[move_index] == compare_str2[j]) {
                 move_index++;
                 correct_times++;
-                if (correct_times == sizeof(compare_str2) - 1) {
-                    cout << compare_str2 << " 是 " << compare_str1 << " 的子字串" << endl;
+                if (correct_times == length2) {
+                    cout << compare_str2 << " is " << compare_str1 << " 's substring" << endl;
                     return;
                 }
             }
             else break;
         }
     }
-    cout << compare_str2 << " 不是 " << compare_str1 << " 的子字串" << endl;
+    cout << compare_str2 << " is not " << compare_str1 << " 's substring" << endl;
     return;
 }
